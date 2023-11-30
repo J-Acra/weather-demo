@@ -1,0 +1,76 @@
+<div class="d-flex justify-content-center mt-5 row">
+  <div class="col-12">
+    <div class="d-flex justify-content-center">
+      <h4>Convert Measurements or Create New Random Card</h4>
+    </div>
+  </div>
+  <div class="col-12">
+    <div class="d-flex justify-content-center mb-5">
+      <div class="dropdown" id="dropdown">
+        <button
+          class="btn btn-secondary dropdown-toggle py-4 px-4 me-4"
+          type="button"
+          id="dropdownMenuButton"
+          data-bs-toggle="dropdown"
+          aria-haspopup="true"
+          aria-expanded="false"
+        >
+          <i class="fa-solid fa-temperature-three-quarters fa-xl"></i>
+        </button>
+        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+          <li (click)="convertWeather(fahrenheit)" class="btn w-100">Fahrenheit</li>
+          <li (click)="convertWeather(celsius)" class="btn w-100">Celsius</li>
+          <li (click)="convertWeather(kelvin)" class="btn w-100">Kelvin</li>
+        </ul>
+      </div>
+      <div class="dropdown">
+        <button
+          class="btn btn-secondary dropdown-toggle py-4 px-4 me-4"
+          type="button"
+          id="dropdownMenuButton"
+          data-bs-toggle="dropdown"
+          aria-haspopup="true"
+          aria-expanded="false"
+        >
+          <i class="fa-solid fa-gauge fa-xl"></i>
+        </button>
+        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+          <li (click)="convertSpeed(mph)" class="btn w-100">Mph</li>
+          <li (click)="convertSpeed(kph)" class="btn w-100">Kph</li>
+          <li (click)="convertSpeed(knots)" class="btn w-100">Knots</li>
+        </ul>
+      </div>
+      <button (click)="addWeatherItem()" class="btn btn-primary py-4 px-4">
+        <i class="fa-solid fa-plus fa-xl"></i>
+      </button>
+    </div>
+  </div>
+  <div
+    class="col-4 d-flex justify-content-center"
+    *ngFor="let weather of weatherList"
+  >
+    <div class="card mb-2" style="width: 18rem">
+      <img
+        [src]="coldWeatherCheck(weather.temp,weather.tempScale)? coldImg : sunnyImg"
+        style="height: 10rem"
+        class="card-img-top"
+        alt="..."
+      />
+      <div class="card-body">
+        <h5 class="card-title text-center">{{ weather.day.toUpperCase() }}</h5>
+        <p class="card-text row mt-3">
+          <span class="col-6"
+            >Temp: {{ weather.temp | number : "1.0-0"
+            }}{{ weather.tempScale }}</span
+          >
+          <span class="col-6"
+            >Wind: {{ weather.windSpeed | number : "1.0-0"
+            }}{{ weather.windScale }}</span
+          >
+        </p>
+        <div class="d-flex justify-content-between"></div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="d-flex justify-content-center mt-5"></div>
