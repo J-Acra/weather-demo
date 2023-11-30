@@ -59,11 +59,11 @@
       <div class="card-body">
         <h5 class="card-title text-center">{{ weather.day.toUpperCase() }}</h5>
         <p class="card-text row mt-3">
-          <span class="col-6"
+          <span class="col-sm-12 col-lg-6"
             >Temp: {{ weather.temp | number : "1.0-0"
             }}{{ weather.tempScale }}</span
           >
-          <span class="col-6"
+          <span class="col-sm-12 col-lg-6"
             >Wind: {{ weather.windSpeed | number : "1.0-0"
             }}{{ weather.windScale }}</span
           >
