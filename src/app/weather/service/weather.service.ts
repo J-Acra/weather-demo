@@ -36,7 +36,7 @@ export class WeatherService {
       {
         day: DayOfWeek.saturday,
         tempScale: TempScale.celsius,
-        temp: 21.1111,
+        temp: 3.1111,
         windScale: WindScale.kph,
         windSpeed: 19.3121
       },

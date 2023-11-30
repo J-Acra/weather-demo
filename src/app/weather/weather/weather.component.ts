@@ -12,8 +12,8 @@ export class WeatherComponent implements OnInit {
   
   weatherData: WeatherData;
   weatherList!: WeatherItem[];
-  sunnyImg:string='../../../assets/sunny.jpg';
-  coldImg:string='../../../assets/cold.jpg';
+  sunnyImg:string='https://media.istockphoto.com/id/1007768414/photo/blue-sky-with-bright-sun-and-clouds.jpg?s=1024x1024&w=is&k=20&c=P68MuQDaXK7NM55yd1ivyrW7NZ2CokCNSfDcXe8BdH0=';
+  coldImg:string='https://www.bhf.org.uk/-/media/images/information-support/heart-matters/2021/november-2021/research/cold-weather-and-your-heart/thermometer_300x196-ss-no-exp.jpg?rev=da1c08cb266e49b5be84e6bfd1d16fcd&h=196&w=300&la=en&hash=3BF8D1E38593B28B1A8EBAD2BF5F8A6E';
 
   celsius = TempScale.celsius
   kelvin =TempScale.kelvin
