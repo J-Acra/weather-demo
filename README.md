@@ -1,27 +1,8 @@
-# WeatherPredictions
+Created a small Proof of Concept to showcase service-oriented architecture and dependency injection for handling data and its re-usability for front-end components.
+Using Separation of Concerns and Strict typing to guarantee data structure, I created a weather service, a weather component, 
+a weather utility class to keep the base weather service clean (using this to store the conversion functions and other misc weather-related functions),
+and a weather-data and weather-item interface,
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.8.
+To see the live demo:
 
-## Development server
-
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+https://j-acra.github.io/weather-demo
